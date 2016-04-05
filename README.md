@@ -8,7 +8,7 @@ Algorithmic Trading
 The momentum strategy is based on the difference between short and long term trends. The figure below shows short and long term averages computed for AAPL.
 
 <p align="center">
-<img src="https://github.com/vsmolyakov/fin/blob/master/figures/momentum.png" width = "600"/>
+<img src="https://github.com/vsmolyakov/fin/blob/master/figures/momentum.png"/>
 </p>
 
 A buy signal is issued when the short-term trend crosses the long-term trend from below, indicating an upward momentum.
