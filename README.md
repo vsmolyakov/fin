@@ -5,13 +5,13 @@ Algorithmic Trading
 
 **Mean-Variance Portfolio**
 
-The objective of mean-variance analysis is to maximize the expected return of a portfolio for a given level of risk as measured by the standard deviation of past returns. By varying the mixing proportions of each asset we can achieve different risk-return characteristics.
+The objective of mean-variance analysis is to maximize the expected return of a portfolio for a given level of risk as measured by the standard deviation of past returns. By varying the mixing proportions of each asset we can achieve different risk-return trade-offs.
 
 <p align="center">
 <img src="https://github.com/vsmolyakov/fin/blob/master/figures/portfolio_merged.png"/>
 </p>
 
-The figure above shows the regression results between pairs of portfolio assets. Notice, for example, how SPY is uncorrelated with TIP and anti-correlated with GLD. Also, the diagonal densities are multi-modal and show negative skewness for riskier assets (e.g. SPY vs LQD). The figure in the top right, shows the expected return vs risk trade-off for a set of randomly generated portfolios. The efficient frontier is defined by a set of portfolios at the top of the curve that correspond to maximum expected return for a given standard deviation. By adding a risk free asset, we can choose a portfolio along a tangent line with slope defined by the Sharpe ratio.
+The figure above shows regression results between pairs of portfolio assets. Notice, for example, how SPY is uncorrelated with TIP and anti-correlated with GLD. Also, the diagonal densities are multi-modal and show negative skewness for riskier assets (e.g. SPY vs LQD). The figure in the top right, shows the expected return vs risk trade-off for a set of randomly generated portfolios. The efficient frontier is defined by a set of portfolios at the top of the curve that correspond to maximum expected return for a given standard deviation. By adding a risk free asset, we can choose a portfolio along a tangent line with slope defined by the Sharpe ratio.
 
 
 **On-Line Portfolio Selection with Moving Average Reversion**
