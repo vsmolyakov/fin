@@ -3,6 +3,17 @@ Algorithmic Trading
 
 ### Description
 
+**Gaussian Process Regression**
+
+Gaussian Proccess (GP) is a way to perform Bayesian inference over functions. A GP assumes that p(f(x1),...,f(xn)) is jointly Gaussian with mean mu(x) and covariance Sigma(x) given by Sigma_ij = k(xi,xj), where k is a positive definite kernel.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/fin/blob/master/figures/market_gp.png"/>
+</p>
+
+The figure above shows GP regression applies to SP500 time series for a period of one year. Notice that the lack of future observations results in a constant prediction, i.e. the mean and the variance of the GP regressor do not change.
+
+
 **Mean-Variance Portfolio**
 
 The objective of mean-variance analysis is to maximize the expected return of a portfolio for a given level of risk as measured by the standard deviation of past returns. By varying the mixing proportions of each asset we can achieve different risk-return trade-offs.
