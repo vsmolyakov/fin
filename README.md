@@ -5,7 +5,7 @@ Algorithmic Trading
 
 **Inverse Covariance Estimation**
 
-Inverse covariance (precision) estimation is useful in constructing a graph network of dependencies. Here, the difference between opening and closing daily prices was used to compute empirical covariance that was fit with graph lasso algorithm to estimate sparse precision matrix. Affinity propagation was used to compute the clusters of stocks.
+Inverse covariance (precision) estimation is useful in constructing a graph network of dependencies. Here, the difference between opening and closing daily prices was used to compute empirical covariance that was fit with graph lasso algorithm to estimate sparse precision matrix. Affinity propagation was used to compute the clusters of stocks and a linear embedding was used to display high dimensional data in 2D.
 
 <p align="center">
 <img src="https://github.com/vsmolyakov/fin/blob/master/figures/inv_cov_merged.png"/>
@@ -21,7 +21,7 @@ Gaussian Proccess (GP) is a way to perform Bayesian inference over functions. A 
 <img src="https://github.com/vsmolyakov/fin/blob/master/figures/market_gp.png"/>
 </p>
 
-The figure above shows GP regression applies to SP500 time series for a period of one year. Notice that the lack of future observations results in a constant prediction, i.e. the mean and the variance of the GP regressor do not change.
+The figure above shows GP regression applied to SP500 time series for a period of one year. Notice that the lack of future observations results in a constant prediction, i.e. the mean and the variance of the GP regressor do not change.
 
 
 **Mean-Variance Portfolio**
