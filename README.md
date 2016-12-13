@@ -3,6 +3,16 @@ Algorithmic Trading
 
 ### Description
 
+**Recurrent Neural Network**
+
+Long Short-Term Memory (LSTM) Recurrent Neural Network (RNN) was trained on the closing price of S&P500 time series data. With a lookback window of 10 days, the LSTM network was used to predict the future values of the S&P500 index.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/fin/blob/master/figures/lstm.png"/>
+</p>
+
+The figure above shows LSTM predictions on the training (green) and the test (red) time series. We can see the regression results closely match the actual market price.
+
 **Inverse Covariance Estimation**
 
 Inverse covariance (precision) estimation is useful in constructing a graph network of dependencies. Here, the difference between opening and closing daily prices was used to compute empirical covariance that was fit with graph lasso algorithm to estimate sparse precision matrix. Affinity propagation was used to compute the clusters of stocks and a linear embedding was used to display high dimensional data in 2D.
