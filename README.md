@@ -3,6 +3,20 @@ Algorithmic Trading
 
 ### Description
 
+**Long Short Strategy**
+
+A long short strategy consists of selecting a universe of equities or futures and ranking them according to a combined alpha factor. Given the rankings, we long the top percentile and short the bottom percentile of securities once every re-balancing period. 
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/fin/blob/master/figures/long_short.png"/>
+</p>
+
+The figure above shows the top minus the bottom quantile 1 day forward return based on combined ranking of three factors: momentum, revenue growth and P/E ratio. We can see the difference in quantile mean return fluctuating around zero.
+
+References:  
+*https://www.quantopian.com/lectures*
+
+
 **Alpha Factor Selection**
 
 A successful trading strategy consists of selecting a universe of securities, alpha factor modeling, alpha combination, risk modeling, portfolio construction and execution. Alpha factors express a predictive relationship between a given set of information and future returns. Discovering informative alpha factors is one of the crucial parts of a trading strategy.
