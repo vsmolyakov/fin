@@ -11,7 +11,7 @@ A successful trading strategy consists of selecting a universe of securities, al
 <img src="https://github.com/vsmolyakov/fin/blob/master/figures/alpha_selection.png"/>
 </p>
 
-Alpha factors can range from returns and pricing movements to fundamental, technical and sentiment indicators. We can use machine learning in order to select the most predictive alphas by training an ensemble model such as Adaboost Classifier. By using alpha factors as features we can obtain a ranking of the most informative features for a given prediction horizon. We can then rank our securitied universe using the combined alpha factor as key and include the top K informative alphas in a trading strategy. In addition, we can use Quantopian AlphaLens tool to quantify the predictive ability of the combined alpha factor. 
+Alpha factors can range from returns and pricing movements to fundamental, technical and sentiment indicators. We can use machine learning in order to select the most predictive alphas by training an ensemble model such as Adaboost Classifier. By using alpha factors as features we can obtain a ranking of the most informative features for a given prediction horizon. We can then rank our securities universe using the combined alpha factor as key and include the top K informative alphas in a trading strategy. In addition, we can use Quantopian AlphaLens tool to quantify the predictive ability of the combined alpha factor. 
 
 References:  
 *https://www.quantopian.com/posts/machine-learning-on-quantopian*
