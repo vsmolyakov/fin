@@ -3,6 +3,20 @@ Algorithmic Trading
 
 ### Description
 
+**Alpha Factor Selection**
+
+A successful trading strategy consists of selecting a universe of securities, alpha factor modeling, alpha combination, risk modeling, portfolio construction and execution. Alpha factors express a predictive relationship between a given set of information and future returns. Discovering informative alpha factors is one of the crucial parts of a trading strategy.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/fin/blob/master/figures/alpha_selection.png"/>
+</p>
+
+Alpha factors can range from returns and pricing movements to fundamental, technical and sentiment indicators. We can use machine learning in order to select the most predictive alphas by training an ensemble model such as Adaboost Classifier. By using alpha factors as features we can obtain a ranking of the most informative features for a given prediction horizon. We can then rank our securitied universe using the combined alpha factor as key and include the top K informative alphas in a trading strategy. In addition, we can use Quantopian AlphaLens tool to quantify the predictive ability of the combined alpha factor. 
+
+References:  
+*https://www.quantopian.com/posts/machine-learning-on-quantopian*
+
+
 **Recurrent Neural Network**
 
 Long Short-Term Memory (LSTM) Recurrent Neural Network (RNN) was trained on the closing price of S&P500 time series data. With a lookback window of 10 days, the LSTM network was used to predict the future values of the S&P500 index.
@@ -75,3 +89,4 @@ Python 2.7
 Sklearn 0.17  
 Pandas 0.16.1  
 Zipline 0.7.0  
+Quantopian
