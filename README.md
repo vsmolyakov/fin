@@ -3,6 +3,20 @@ Algorithmic Trading
 
 ### Description
 
+**Pairs Trading Strategy**
+
+A pairs trading strategy consists of identifying similar pairs of stocks and taking a linear combination of their price so that the result is a stationary time series. We can then compute z-scores for the stationary signal and trade on the spread assuming mean reversion: short the top asset and long the bottom asset.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/fin/blob/master/figures/pairs_trading.png"/>
+</p>
+
+The figure above shows spread z-scores for Coke and Pepsi stocks. When the z-score is outside the +/- 1 band, we bet it's going to mean revert. So we long the bottom asset when the zscore is less than -1 and we short the top asset when the zscore is greater than 1. And we clear positions inside the band.
+
+References:  
+*https://www.quantopian.com/lectures*
+
+
 **Long Short Strategy**
 
 A long short strategy consists of selecting a universe of equities or futures and ranking them according to a combined alpha factor. Given the rankings, we long the top percentile and short the bottom percentile of securities once every re-balancing period. 
