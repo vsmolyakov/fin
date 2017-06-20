@@ -7,11 +7,11 @@ from sklearn.neighbors import KDTree
 from pandas.tools.plotting import scatter_matrix
 from scipy.spatial import ConvexHull
 
-from zipline.utils.factory import load_from_yahoo
+import pandas_datareader.data as web
 from datetime import datetime
 import pytz
 
-STOCKS = ['SPY','LQD','TIP','GLD','IEUR']
+STOCKS = ['SPY','LQD','TIP','GLD','MSFT']
 
 np.random.seed(0)    
 
@@ -21,9 +21,17 @@ if __name__ == "__main__":
     
     #load data
     #year, month, day, hour, minute, second, microsecond
-    start = datetime(2000, 1, 1, 0, 0, 0, 0, pytz.utc)
-    end = datetime(2016, 1, 1, 0, 0, 0, 0, pytz.utc)    
-    data = load_from_yahoo(stocks=STOCKS, indexes={}, start=start, end=end)
+    start = datetime(2012, 1, 1, 0, 0, 0, 0, pytz.utc)
+    end = datetime(2017, 1, 1, 0, 0, 0, 0, pytz.utc)     
+    
+    data = pd.DataFrame()
+    series = []
+    for ticker in STOCKS:
+        price = web.DataReader(ticker, 'google', start, end)
+        series.append(price['Close'])
+
+    data = pd.concat(series, axis=1)
+    data.columns = STOCKS
     data = data.dropna()
     
     #plot data correlations
@@ -71,7 +79,7 @@ if __name__ == "__main__":
     plt.figure()
     plt.scatter(ps, pv, marker='o', color='b', linewidth = '3.0', label = 'tangent portfolio')
     plt.scatter(volatility, np.sum(adj_price * weights), marker = 's', color = 'r', linewidth = '3.0', label = 'current')
-    plt.plot(points[hull.vertices,0], points[hull.vertices,1], 'g--', linewidth = '2.0')    
+    plt.plot(points[hull.vertices,0], points[hull.vertices,1], linewidth = '2.0')    
     plt.title('expected return vs volatility')
     plt.ylabel('expected price')
     plt.xlabel('portfolio std dev')
