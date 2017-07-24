@@ -44,6 +44,19 @@ Alpha factors can range from returns and pricing movements to fundamental, techn
 References:  
 *https://www.quantopian.com/posts/machine-learning-on-quantopian*
 
+**Stochastic Volatility**
+
+Asset returns have a time-varying volatility. We use a bayesian model to describe the time varying nature of volatility in which the returns are T-distributed with variance that follows a Gaussian Random Walk. PyMC3 is used to infer the latent volatility process.
+
+<p align="center">
+<img src="https://github.com/vsmolyakov/fin/blob/master/figures/stoch_volatility.png"/>
+</p>
+
+The figure above shows the S&P500 returns and posterior volatility samples obtained with MCMC. On the left, we can see the time-varying posterior volatility and on the right, we have trace plots for the degrees of freedom of T-distributed returns and a prior on standard deviation for the Gaussian Random Walk.
+
+References:  
+*http://pymc-devs.github.io/pymc3/notebooks/stochastic_volatility.html*
+
 
 **Recurrent Neural Network**
 
